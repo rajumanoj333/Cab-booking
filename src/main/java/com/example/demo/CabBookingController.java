@@ -19,14 +19,14 @@ public class CabBookingController {
     @ResponseBody
     @RequestMapping("/book/{fullName}/{password}/{email}/{phoneNumber}/{location}/{destination}/{carType}/{distance}")
     public String bookCab(
-            @PathVariable("fullName") String fullName,
-            @PathVariable("password") String password,
-            @PathVariable("email") String email,
-            @PathVariable("phoneNumber") String phoneNumber,
-            @PathVariable("location") String location,
-            @PathVariable("destination") String destination,
-            @PathVariable("carType") String carType,
-            @PathVariable("distance") int distance) {
+            @PathVariable String fullName,
+            @PathVariable String password,
+            @PathVariable String email,
+            @PathVariable String phoneNumber,
+            @PathVariable String location,
+            @PathVariable String destination,
+            @PathVariable String carType,
+            @PathVariable int distance) {
 
         // Calculate fare
         int fare = distance * 2;
